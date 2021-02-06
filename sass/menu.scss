@@ -8,7 +8,7 @@ Main
 .cd-nav-trigger {
 	position: absolute;
 	display: inline-block;
-	top: 10px;
+	top: 16px;
 	right: 15px;
 	height: 44px;
 	width: 44px;
@@ -92,7 +92,7 @@ Main
 	}
 	&::before {
 		background-color:  transparent;
-		border: 1px solid $color-it-1;
+		border: 1px solid $color-secundario;
 		@include transform (scale(1));
 		@include transition(transition-duration, 0.3s);
 		@include transition(transition-delay, 0.4s);

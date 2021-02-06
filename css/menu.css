@@ -4,7 +4,7 @@ Main
 .cd-nav-trigger {
   position: absolute;
   display: inline-block;
-  top: 10px;
+  top: 16px;
   right: 15px;
   height: 44px;
   width: 44px;
@@ -78,7 +78,7 @@ Main
 }
 .cd-nav-trigger::before {
   background-color: transparent;
-  border: 1px solid #faa;
+  border: 1px solid #555555;
   transform: scale(1);
   -moz-transition-duration: 0.3s;
   -ms-transition-duration: 0.3s;

@@ -1,3 +1,22 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
+.social-m{
+	display: none;
+}
+@media (max-width: 600px){
+	.social-d{
+		display: none;
+	}
+	.social-m{
+		display: block;
+		margin: 3px 48px 0 0!important;
+	}
+	.social-m ul li a{
+	    line-height: inherit!important;
+	    font-size: 20px!important;
+	    padding: 6px!important;
+	    border: 1px solid #555!important;
+	    border-radius: 50%!important;
+	}
+}
