@@ -46,7 +46,7 @@ Author URI: http://themeforest.net/user/Ansonika/
   margin-left: -25px;
   margin-top: -25px;
   animation: circle infinite 0.95s linear;
-  border: 2px solid #1c5dab;
+  border: 2px solid #ee3344;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.2);
   border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -183,7 +183,7 @@ a.animated_link:before {
   bottom: -5px;
   opacity: 1;
   left: 0;
-  background-color: #0073e5;
+  background-color: #ee3344;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease;
@@ -206,7 +206,7 @@ a.animated_link.active:before {
   bottom: -5px;
   opacity: 1;
   left: 0;
-  background-color: #0073e5;
+  background-color: #ee3344;
   visibility: visible;
   transform: scaleX(1);
 }
@@ -254,7 +254,6 @@ header {
   position: relative;
   padding: 15px 0;
   background-color: #fff;
-  z-index: 9;
 }
 
 #logo_home h1 {
@@ -309,7 +308,7 @@ header {
 main {
   background: #f8f8f8 url(../img/fondo-clear.jpg) repeat;
   background-size: cover;
-  margin-top: -80px;
+  background-position: center;
 }
 main.plain {
   background: #f8f8f8;
@@ -520,7 +519,6 @@ input#website {
 #wizard_container {
   position: relative;
   min-height: 450px;
-  padding-top: 50px;
 }
 
 /* Wizard Buttons*/
