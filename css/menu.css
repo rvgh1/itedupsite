@@ -165,6 +165,22 @@ ul.cd-primary-nav {
   transition: visibility 0s, opacity 0.3s;
 }
 
+.cd-primary-nav .social-iconos {
+  text-align: center;
+  margin-top: 100px;
+}
+.cd-primary-nav .social-iconos a {
+  color: #ee3344 !important;
+}
+.cd-primary-nav .footer-nav {
+  text-align: center;
+  margin-top: 100px;
+}
+.cd-primary-nav .footer-nav a {
+  padding-right: 20px;
+  font-size: 14px;
+}
+
 .cd-primary-nav li {
   margin: 1em 0;
   text-align: center;
@@ -192,7 +208,7 @@ ul.cd-primary-nav {
 
 @media only screen and (min-width: 768px) {
   .cd-primary-nav li {
-    margin: 2em 0;
+    /*margin: 2em 0;*/
   }
 
   .cd-primary-nav a {
@@ -202,7 +218,7 @@ ul.cd-primary-nav {
 }
 @media only screen and (min-width: 1170px) {
   .cd-primary-nav li {
-    margin: 2.6em 0;
+    /*margin: 2.6em 0;*/
   }
 
   .cd-primary-nav a {
