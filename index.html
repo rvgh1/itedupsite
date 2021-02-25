@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="STEPS | Multipurpose Working Wizard with Branches">
     <meta name="author" content="Ansonika">
-    <title>ITedup | Agencia Digital en la CDMX</title>
+    <title data-lang="titulo-web">ITedup | Agencia Digital en la CDMX</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/itedup-it.png" type="image/x-icon">
@@ -80,9 +80,9 @@
                     <!-- /social -->
                     <nav>
                         <ul class="cd-primary-nav">
-                            <li><a href="about.html" class="animated_link">Imagen Corporativa</a></li>
+                            <li><a data-id="menu1" href="about.html" class="animated_link">Imagen Corporativa</a></li>
                             <li><a href="contacts.html" class="animated_link">Web / Apps</a></li>
-                            <li><a href="icon-pack-1.html" class="animated_link">Marketing Digital</a></li>
+                            <li><a data-id="menu2" href="icon-pack-1.html" class="animated_link">Marketing Digital</a></li>
                             <li style="padding: 16px 0;"></li>
                             <li><a href="icon-pack-2.html" class="animated_link">Casos de Éxito</a></li>
                             <li><a href="icon-pack-3.html" class="animated_link">Blog</a></li>
@@ -93,9 +93,41 @@
 	                        	<a href="#"><i class="icon-youtube-play"></i></a>
 	                        </div>	
 	                        <div class="footer-nav">
-	                        	<a href=""><span><img style="width: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"> English</span></a>
-	                        	<a href="#">Aviso Legal</a>
+	                        	<div style="display: flex; align-items: center;">
+	                        	<!--a id="translate" data-text="English,Español" data-file="es,en" data-index="1" href=""><span><img style="width: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"> English</span></a-->
+	                        	
+	                        	<!--a href="#" id="translate" data-text="English,Español" data-file="es,en" data-index="1">English</a-->
+	                        	
+	                        	<!--div id="google_translate_element" class="google"></div-->
+	                        	<span id="google_translate_element" class="google"></span>
+	                        	<script type="text/javascript">
+									function googleTranslateElementInit() {
+										new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        							}
+								</script>
+								<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+								
+								<!--select id="idioma" class="intfrase">
+								  <option onclick="cambiarIdioma('es')" class="intfrase" value="es">Español</option>
+								  <option onclick="cambiarIdioma('en')" class="intfrase" value="en">Ingles</option>
+								</select-->
+								<!--div>
+								  <span data-tr="Cambiar idioma:"></span>
+								  <button data-tr="Español" id="btn-es"></button>
+								  <button data-tr="Inglés" id="btn-en"></button>
+								  <button data-tr="Portugués" id="btn-pt"></button>
+								  
+								  <span data-tr="Cambiar idioma:"></span>
+								  <select>
+								  	<option data-tr="Español" id="btn-es"></option>
+								  	<option data-tr="Inglés" id="btn-en"></option>
+								  	<option data-tr="Portugués" id="btn-pt"></option>
+								  </select>
+								</div-->
+
+	                        	<a href="aviso-legal.html">Aviso Legal</a>
 	                        	<a style="pointer-events: none;" href="#">© 2021</a>
+	                        	</div>
 	                        </div>	
                         </ul>
                     </nav>
@@ -117,7 +149,7 @@
 						<!-- First branch What Type of Project ============================== -->
 						<div class="step" data-state="branchtype">
 							<div class="question_title">
-								<h3>¿En que te podemos ayudar?</h3>
+								<h3 data-tr="titulo1">¿En que te podemos ayudar?</h3>
 								<p>Escoge el área de tu interés.</p>
 							</div>
 							<div class="row">
@@ -493,7 +525,108 @@
     <script src="js/common_scripts.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/wizard_func_multiple_branch.js"></script>	
+	<script src="js/wizard_func_multiple_branch.js"></script>
+	<!--script>
+		var lista = document.getElementById("idioma");
+		var idioma = localStorage.getItem("idioma");
+
+		frases = {
+		  "en": {
+		    "menu1": "Corporate Image",
+		    "menu2": "Digital Marketing"
+		  },
+		  "es": {
+		    "menu1": "Imagen Corporativa",
+		    "menu2": "Marketing Digital"
+		  }
+		}
+
+		if (idioma) {
+
+			function cambiarIdioma(lang) {
+				var elems = document.querySelectorAll(".intfrase");
+			  	for (var x = 0; x < elems.length; x++)
+			    elems[x].innerHTML = frases[lang][ elems[x].dataset.id ];
+			}
+		} else {
+
+			cambiarIdioma("es");
+		}
+
+		var _lang = $("#idioma").val();
+
+		$("select").on("change", function() {
+		  cambiaId();
+		  location.reload();
+		});
+
+		function cambiaId() {
+		  _lang = $("#idioma").val();
+		  //alert(_lang);
+		  localStorage.setItem("idioma", _lang)
+
+		}
+	</script-->
+
+	<!--script>
+		/**
+ * JSON con las cadenas traducidas a los diferentes idiomas.
+ * No hay español, por ser el default.
+ */
+frases = {
+  "en": {
+    "Cambiar idioma:": "Change language:",
+    "Español": "Spanish",
+    "Inglés": "English",
+    "Portugués": "Portuguese",
+    "titulo1": "How can we help?"
+  },
+  "pt": {
+    "Cambiar idioma:": "Mudar idioma:",
+    "Español": "Espanhol",
+    "Inglés": "Inglês",
+    "Portugués": "Português",
+    "titulo1": "Como podemos ajudar?"
+  }
+};
+
+/**
+ * Función que cambia todos los elementos al nuevo idioma.
+ *
+ * @param {string} lang
+ */
+function cambiarIdioma(lang) {
+  // Habilita las 2 siguientes para guardar la preferencia.
+  //lang = lang || sessionStorage.getItem('app-lang') || 'es';
+  //sessionStorage.setItem('app-lang', lang);
+
+  var elems = document.querySelectorAll('[data-tr]');
+  for (var x = 0; x < elems.length; x++) {
+    elems[x].innerHTML = frases.hasOwnProperty(lang)
+      ? frases[lang][elems[x].dataset.tr]
+      : elems[x].dataset.tr;
+  }
+}
+
+window.onload = function(){
+  cambiarIdioma();
+  
+  document
+    .getElementById('btn-es')
+    .addEventListener('click', cambiarIdioma.bind(null, 'es'));
+
+  document
+    .getElementById('btn-en')
+    .addEventListener('click', cambiarIdioma.bind(null, 'en'));
+
+  document
+    .getElementById('btn-pt')
+    .addEventListener('click', cambiarIdioma.bind(null, 'pt'));
+}
+	</script-->
+
+	<!--script src="https://code.jquery.com/jquery-3.0.0.min.js"></script-->
+	<!--script src="js/translate.js"></script-->	
 	
 </body>
 </html>
